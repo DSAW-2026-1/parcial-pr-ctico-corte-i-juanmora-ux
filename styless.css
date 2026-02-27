@@ -1,0 +1,56 @@
+/* Reset básico para control total del Box-Model */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a; /* Fondo oscuro para contraste */
+}
+
+/* 1. Contenedor Principal (400x300) */
+.main-container {
+  width: 400px;
+  height: 300px;
+  background-color: #001f99; /* Azul oscuro del diseño */
+  padding: 1.5rem;
+  
+  /* Layout Principal: Empujamos los grupos a las esquinas */
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+/* 2. Definición de Figuras (Unidades rem) */
+.shape {
+  width: 4rem;
+  height: 4rem;
+}
+
+.square {
+  background-color: #66ccdd; /* Azul claro */
+}
+
+.circle {
+  background-color: #d65a92; /* Rosa/Fucsia */
+  border-radius: 50%;         /* Transformación a círculo */
+}
+
+/* 3. Layout de los Grupos (Esquinas) */
+.corner-group {
+  display: flex;
+  gap: 0.5rem; /* Espacio entre cuadrado y círculo */
+  align-items: center;
+}
+
+/* 4. Refinamiento: Inversión de orden para simetría */
+/* Usamos la clase .reverse para espejar los grupos según la imagen */
+.reverse {
+  flex-direction: row-reverse;
+}
